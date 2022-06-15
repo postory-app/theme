@@ -1,7 +1,27 @@
 library postory_theme;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+import './core/color_scheme.dart';
+import 'core/text_themes.dart';
+
+class PostoryTheme {
+  static ThemeData light() {
+    return ThemeData.from(
+      colorScheme: colorScheme,
+      useMaterial3: true,
+    ).copyWith(
+      cupertinoOverrideTheme: CupertinoThemeData(
+        brightness: colorScheme.brightness,
+      ),
+      typography: Typography(
+        white: TextThemes.white,
+        black: TextThemes.black,
+      ),
+      textTheme: TextThemes.black,
+    );
+  }
+
+  static ThemeData dark() => PostoryTheme.light();
 }

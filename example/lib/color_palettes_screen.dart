@@ -12,11 +12,11 @@ class ColorPalettesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color selectedColor = Theme.of(context).primaryColor;
-    ThemeData lightTheme =
-        ThemeData(colorSchemeSeed: selectedColor, brightness: Brightness.light);
-    ThemeData darkTheme =
-        ThemeData(colorSchemeSeed: selectedColor, brightness: Brightness.dark);
+    // Color selectedColor = Theme.of(context).primaryColor;
+    // ThemeData lightTheme =
+    //     ThemeData(colorSchemeSeed: selectedColor, brightness: Brightness.light);
+    // ThemeData darkTheme =
+    //     ThemeData(colorSchemeSeed: selectedColor, brightness: Brightness.dark);
 
     Widget schemeLabel(String brightness) {
       return Padding(
@@ -45,11 +45,11 @@ class ColorPalettesScreen extends StatelessWidget {
               children: [
                 divider,
                 schemeLabel("Light Theme"),
-                schemeView(lightTheme),
+                schemeView(Theme.of(context)),
                 divider,
                 divider,
                 schemeLabel("Dark Theme"),
-                schemeView(darkTheme)
+                schemeView(Theme.of(context))
               ],
             ),
           );
@@ -63,7 +63,7 @@ class ColorPalettesScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         schemeLabel("Light Theme"),
-                        schemeView(lightTheme)
+                        schemeView(Theme.of(context))
                       ],
                     ),
                   ),
@@ -71,7 +71,7 @@ class ColorPalettesScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         schemeLabel("Dark Theme"),
-                        schemeView(darkTheme)
+                        schemeView(Theme.of(context))
                       ],
                     ),
                   )

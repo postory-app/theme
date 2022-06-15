@@ -5,9 +5,7 @@ class TypographyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context)
-        .textTheme
-        .apply(displayColor: Theme.of(context).colorScheme.onSurface);
+    final textTheme = Theme.of(context).textTheme;
     return Expanded(
       child: ListView(
         children: <Widget>[
