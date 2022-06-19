@@ -3,8 +3,10 @@ library postory_theme;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import './core/color_scheme.dart';
+import 'core/color_scheme.dart';
 import 'core/text_themes.dart';
+
+export 'package:postory_theme/fonts/postory_icons.dart';
 
 class PostoryTheme {
   static ThemeData light() {
