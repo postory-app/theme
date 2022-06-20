@@ -19,6 +19,9 @@ dev_dependencies:
 
 flutter:
   assets:
+    - images/explore/
+    - images/payment/
+    - images/pocoin/
     - svgs/
 
   fonts:
