@@ -2,11 +2,13 @@
 
 import 'package:flutter/widgets.dart';
 
+import 'constants.dart';
+
 class PostoryIcons {
   PostoryIcons._();
 
   static const _kFontFam = 'PostoryIcons';
-  static const String _kFontPkg = 'postory_theme';
+  static const String _kFontPkg = packageName;
 
   static const IconData alarm_new =
       IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);

@@ -59,24 +59,26 @@ class IconsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Wrap(
-        spacing: 16.0,
-        runSpacing: 16.0,
-        children: icons
-            .map((icon) => SizedBox(
-                  width: 128.0,
-                  height: 64.0,
-                  child: Card(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(icon.value),
-                        Text(icon.key),
-                      ],
+      child: SingleChildScrollView(
+        child: Wrap(
+          spacing: 16.0,
+          runSpacing: 16.0,
+          children: icons
+              .map((icon) => SizedBox(
+                    width: 128.0,
+                    height: 64.0,
+                    child: Card(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(icon.value),
+                          Text(icon.key),
+                        ],
+                      ),
                     ),
-                  ),
-                ))
-            .toList(),
+                  ))
+              .toList(),
+        ),
       ),
     );
   }

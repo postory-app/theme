@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 import 'core/color_scheme.dart';
 import 'core/text_themes.dart';
 
-export 'package:postory_theme/fonts/postory_icons.dart';
+export 'package:postory_theme/core/svgs.dart';
+export 'package:postory_theme/core/icons.dart';
 
 class PostoryTheme {
   static ThemeData light() {

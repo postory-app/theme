@@ -17,6 +17,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   postory_theme:
     path: ../
+  flutter_svg: ^1.1.0
 
 dev_dependencies:
   flutter_test:

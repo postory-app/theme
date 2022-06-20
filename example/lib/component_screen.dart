@@ -375,6 +375,12 @@ const List<NavigationDestination> appBarDestinations = [
   NavigationDestination(
     tooltip: "",
     icon: Icon(Icons.widgets_outlined),
+    label: 'Svgs',
+    selectedIcon: Icon(Icons.widgets),
+  ),
+  NavigationDestination(
+    tooltip: "",
+    icon: Icon(Icons.widgets_outlined),
     label: 'Icons',
     selectedIcon: Icon(Icons.widgets),
   ),

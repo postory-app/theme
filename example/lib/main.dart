@@ -5,6 +5,7 @@ import 'package:postory_theme/postory_theme.dart';
 import 'color_palettes_screen.dart';
 import 'component_screen.dart';
 import 'elevation_screen.dart';
+import 'svg_screen.dart';
 import 'typography_screen.dart';
 
 void main() {
@@ -48,14 +49,16 @@ class _Material3DemoState extends State<Material3Demo> {
   Widget createScreenFor(int screenIndex, bool showNavBarExample) {
     switch (screenIndex) {
       case 0:
-        return const IconsScreen();
+        return const SvgScreen();
       case 1:
-        return ComponentScreen(showNavBottomBar: showNavBarExample);
+        return const IconsScreen();
       case 2:
-        return const ColorPalettesScreen();
+        return ComponentScreen(showNavBottomBar: showNavBarExample);
       case 3:
-        return const TypographyScreen();
+        return const ColorPalettesScreen();
       case 4:
+        return const TypographyScreen();
+      case 5:
         return const ElevationScreen();
       default:
         return ComponentScreen(showNavBottomBar: showNavBarExample);
