@@ -22,6 +22,7 @@ flutter:
     - images/explore/
     - images/payment/
     - images/pocoin/
+    - lotties/
     - svgs/
 
   fonts:

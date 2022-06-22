@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_3_demo/icon_screen.dart';
+import 'package:material_3_demo/lottie_screen.dart';
 import 'package:postory_theme/postory_theme.dart';
 
 import 'color_palettes_screen.dart';
@@ -50,18 +51,20 @@ class _Material3DemoState extends State<Material3Demo> {
   Widget createScreenFor(int screenIndex, bool showNavBarExample) {
     switch (screenIndex) {
       case 0:
-        return const ImageScreen();
+        return const LottieScreen();
       case 1:
-        return const SvgScreen();
+        return const ImageScreen();
       case 2:
-        return const IconsScreen();
+        return const SvgScreen();
       case 3:
-        return ComponentScreen(showNavBottomBar: showNavBarExample);
+        return const IconsScreen();
       case 4:
-        return const ColorPalettesScreen();
+        return ComponentScreen(showNavBottomBar: showNavBarExample);
       case 5:
-        return const TypographyScreen();
+        return const ColorPalettesScreen();
       case 6:
+        return const TypographyScreen();
+      case 7:
         return const ElevationScreen();
       default:
         return ComponentScreen(showNavBottomBar: showNavBarExample);
