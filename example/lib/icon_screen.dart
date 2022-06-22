@@ -51,6 +51,7 @@ final icons = {
   'arrow_left': MyIcons.arrow_left,
   'arrow_right': MyIcons.arrow_right,
   'arrow_up': MyIcons.arrow_up,
+  'v_address': MyIcons.v_address,
 }.entries.toList(growable: false);
 
 class IconsScreen extends StatelessWidget {

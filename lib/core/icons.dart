@@ -7,7 +7,7 @@ import 'constants.dart';
 class PostoryIcons {
   PostoryIcons._();
 
-  static const _kFontFam = 'PostoryIcons';
+  static const _kFontFam = 'POSTORY';
   static const String _kFontPkg = packageName;
 
   static const IconData alarm_new =
@@ -106,4 +106,6 @@ class PostoryIcons {
       IconData(0xe82e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData arrow_up =
       IconData(0xe82f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData v_address =
+      IconData(0xe830, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }

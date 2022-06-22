@@ -26,6 +26,6 @@ flutter:
     - svgs/
 
   fonts:
-    - family: PostoryIcons
+    - family: POSTORY
       fonts:
-        - asset: fonts/PostoryIcons.ttf
+        - asset: fonts/POSTORY.ttf
