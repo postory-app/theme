@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:material_3_demo/widgets/drawer.dart';
 
-class TypographyScreen extends StatelessWidget {
-  const TypographyScreen({super.key});
+class TypographyPage extends StatelessWidget {
+  const TypographyPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    return Expanded(
-      child: ListView(
+    return Scaffold(
+      appBar: AppBar(title: const Text('typography')),
+      drawer: const MyDrawer(),
+      body: ListView(
         children: <Widget>[
           const SizedBox(height: 7),
           TextStyleExample(

@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-
-import 'alias.dart';
+import 'package:material_3_demo/alias.dart';
+import 'package:material_3_demo/widgets/drawer.dart';
 
 final lotties = {
   'point': MyLotties.point,
 }.entries.toList(growable: false);
 
-class LottieScreen extends StatelessWidget {
-  const LottieScreen({Key? key}) : super(key: key);
+class LottiePage extends StatelessWidget {
+  const LottiePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(title: const Text('lotties')),
+      drawer: const MyDrawer(),
+      body: SingleChildScrollView(
         child: Wrap(
           spacing: 16.0,
           runSpacing: 16.0,

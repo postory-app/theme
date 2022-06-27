@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import 'alias.dart';
+import 'package:material_3_demo/alias.dart';
+import 'package:material_3_demo/widgets/drawer.dart';
 
 final svgs = {
   'color_privite': MySvgs.color_privite,
@@ -26,13 +26,15 @@ final svgs = {
   'success': MySvgs.success,
 }.entries.toList(growable: false);
 
-class SvgScreen extends StatelessWidget {
-  const SvgScreen({Key? key}) : super(key: key);
+class SvgPage extends StatelessWidget {
+  const SvgPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(title: const Text('svgs')),
+      drawer: const MyDrawer(),
+      body: SingleChildScrollView(
         child: Wrap(
           spacing: 16.0,
           runSpacing: 16.0,

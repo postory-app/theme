@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-
-import 'alias.dart';
+import 'package:material_3_demo/alias.dart';
+import 'package:material_3_demo/widgets/drawer.dart';
 
 final images = {
   'explore_main': MyImages.explore_main,
@@ -26,13 +25,15 @@ final images = {
   'pocoin_top_up_banner': MyImages.pocoin_top_up_banner,
 }.entries.toList(growable: false);
 
-class ImageScreen extends StatelessWidget {
-  const ImageScreen({Key? key}) : super(key: key);
+class ImagePage extends StatelessWidget {
+  const ImagePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(title: const Text('images')),
+      drawer: const MyDrawer(),
+      body: SingleChildScrollView(
         child: Wrap(
           spacing: 16.0,
           runSpacing: 16.0,

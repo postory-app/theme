@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ComponentScreen extends StatelessWidget {
-  const ComponentScreen({super.key, required this.showNavBottomBar});
+class ComponentPage extends StatelessWidget {
+  const ComponentPage({super.key, required this.showNavBottomBar});
 
   final bool showNavBottomBar;
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'alias.dart';
+import 'package:material_3_demo/alias.dart';
+import 'package:material_3_demo/widgets/drawer.dart';
 
 final icons = {
   'alarm_new': MyIcons.alarm_new,
@@ -54,13 +54,15 @@ final icons = {
   'v_address': MyIcons.v_address,
 }.entries.toList(growable: false);
 
-class IconsScreen extends StatelessWidget {
-  const IconsScreen({Key? key}) : super(key: key);
+class IconsPage extends StatelessWidget {
+  const IconsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(title: const Text('icons')),
+      drawer: const MyDrawer(),
+      body: SingleChildScrollView(
         child: Wrap(
           spacing: 16.0,
           runSpacing: 16.0,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_3_demo/widgets/drawer.dart';
 
 const Widget divider = SizedBox(height: 10);
 
@@ -7,8 +8,8 @@ const Widget divider = SizedBox(height: 10);
 // be displayed in a row.
 const double narrowScreenWidthThreshold = 400;
 
-class ColorPalettesScreen extends StatelessWidget {
-  const ColorPalettesScreen({super.key});
+class ColorPalettesPage extends StatelessWidget {
+  const ColorPalettesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +38,10 @@ class ColorPalettesScreen extends StatelessWidget {
       );
     }
 
-    return Expanded(
-      child: LayoutBuilder(builder: (context, constraints) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('color paletters')),
+      drawer: const MyDrawer(),
+      body: LayoutBuilder(builder: (context, constraints) {
         if (constraints.maxWidth < narrowScreenWidthThreshold) {
           return SingleChildScrollView(
             child: Column(
