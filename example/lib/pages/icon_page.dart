@@ -52,6 +52,11 @@ final icons = {
   'arrow_right': MyIcons.arrow_right,
   'arrow_up': MyIcons.arrow_up,
   'v_address': MyIcons.v_address,
+  'n_avater': MyIcons.n_avater,
+  'n_explore': MyIcons.n_explore,
+  'n_home': MyIcons.n_home,
+  'n_postory': MyIcons.n_postory,
+  'n_store': MyIcons.n_store,
 }.entries.toList(growable: false);
 
 class IconsPage extends StatelessWidget {
