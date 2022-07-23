@@ -2,10 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:material_3_demo/pages/color_palettes_page.dart';
 import 'package:material_3_demo/pages/image_page.dart';
 import 'package:material_3_demo/pages/lottie_page.dart';
+import 'package:material_3_demo/pages/navigation_bar_page.dart';
 import 'package:material_3_demo/pages/svg_page.dart';
 import 'package:material_3_demo/pages/typography_page.dart';
 
 extension NavigatorStateExtension on NavigatorState {
+  Future toNavigationBarPage() {
+    return push(
+      MaterialPageRoute(builder: (_) => const NavigationBarPage()),
+    );
+  }
+
   Future toLottiePage() {
     return push(
       MaterialPageRoute(builder: (_) => const LottiePage()),
