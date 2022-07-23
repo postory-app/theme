@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:postory_theme/core/constants.dart';
-import 'package:postory_theme/core/lotties.dart';
+import 'package:postory_theme/src/constants.dart';
+import 'package:postory_theme/src/lotties.dart';
 
 void main() {
   String getPath(String name) {

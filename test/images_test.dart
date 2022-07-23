@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:path/path.dart';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:postory_theme/core/images.dart';
+import 'package:postory_theme/src/images.dart';
 
 typedef Images = PostoryImages;
 
