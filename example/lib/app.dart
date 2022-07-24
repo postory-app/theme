@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:material_3_demo/pages/icon_page.dart';
+import 'package:material_3_demo/pages/navigation_bar_page.dart';
 import 'package:postory_theme/postory_theme.dart';
 
 class App extends StatelessWidget {
@@ -13,7 +13,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: PostoryTheme.light(),
       darkTheme: PostoryTheme.dark(),
-      home: const IconsPage(),
+      home: const NavigationBarPage(),
     );
   }
 }

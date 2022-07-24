@@ -12,15 +12,18 @@ class PostoryTheme {
       colorScheme: colorScheme,
       useMaterial3: true,
     ).copyWith(
-      cupertinoOverrideTheme: CupertinoThemeData(
-        brightness: colorScheme.brightness,
-      ),
-      typography: Typography(
-        white: TextThemes.white,
-        black: TextThemes.black,
-      ),
-      textTheme: TextThemes.black,
-    );
+        cupertinoOverrideTheme: CupertinoThemeData(
+          brightness: colorScheme.brightness,
+        ),
+        typography: Typography(
+          white: TextThemes.white,
+          black: TextThemes.black,
+        ),
+        textTheme: TextThemes.black,
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.black38,
+        ));
   }
 
   static ThemeData dark() => PostoryTheme.light();
