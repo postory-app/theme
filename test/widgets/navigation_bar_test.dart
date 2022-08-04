@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:postory_theme/postory_theme.dart';
 import 'package:postory_theme/src/widgets/navigation_bar.dart';
 import 'package:postory_theme/src/widgets/navigation_bar_speed_dial.dart';
 
 Widget buildApp({required Widget widget}) {
   return MaterialApp(
+    theme: PostoryTheme.light(),
     home: Center(child: widget),
   );
 }

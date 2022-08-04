@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:postory_theme/src/themes/navigation_bar_theme_data.dart';
 
 import 'navigation_bar_speed_dial.dart';
 
@@ -54,22 +55,24 @@ class _PostoryNavigationBarState extends State<PostoryNavigationBar> {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      items: widget.items,
-      onTap: (value) {
-        setCurrentIndex(value);
-        widget.onTap?.call(value);
+    return PostoryNavigationBarTheme(
+      child: BottomNavigationBar(
+        items: widget.items,
+        onTap: (value) {
+          setCurrentIndex(value);
+          widget.onTap?.call(value);
 
-        if (currentIndex == speedDialIndex) {
-          widget.speedDial.controller.show();
-        } else {
-          widget.speedDial.controller.hide();
-        }
-      },
-      currentIndex: currentIndex,
-      type: type,
-      showSelectedLabels: showSelectedLabels,
-      showUnselectedLabels: showUnselectedLabels,
+          if (currentIndex == speedDialIndex) {
+            widget.speedDial.controller.show();
+          } else {
+            widget.speedDial.controller.hide();
+          }
+        },
+        currentIndex: currentIndex,
+        type: type,
+        showSelectedLabels: showSelectedLabels,
+        showUnselectedLabels: showUnselectedLabels,
+      ),
     );
   }
 }
