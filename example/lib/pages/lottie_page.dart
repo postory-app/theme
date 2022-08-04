@@ -5,6 +5,8 @@ import 'package:material_3_demo/widgets/drawer.dart';
 
 final lotties = {
   'point': MyLotties.point,
+  'store_check': MyLotties.store_check,
+  'store_loading': MyLotties.store_loading,
 }.entries.toList(growable: false);
 
 class LottiePage extends StatelessWidget {
