@@ -11,6 +11,10 @@ class MyDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           ListTile(
+            title: const Text('icons'),
+            onTap: Navigator.of(context).toIconsPage,
+          ),
+          ListTile(
             title: const Text('navigation bar'),
             onTap: Navigator.of(context).toNavigationBarPage,
           ),
