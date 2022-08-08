@@ -19,6 +19,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
       appBar: AppBar(title: const Text('')),
       drawer: const MyDrawer(),
       bottomNavigationBar: PostoryNavigationBar(
+        initialIndex: 0,
         items: const [
           BottomNavigationBarItem(
             icon: NavigationBarIcon.home(active: false),

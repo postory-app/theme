@@ -8,14 +8,18 @@ class PostoryNavigationBar extends StatefulWidget {
     Key? key,
     required this.items,
     required this.speedDial,
-    this.initialIndex = 0,
+    this.initialIndex,
+    this.currentIndex,
+    this.speedDialIndex = 2,
     this.onTap,
-  })  : assert(items.length == 5),
+  })  : assert((initialIndex != null) ^ (currentIndex != null)),
         super(key: key);
 
   final List<BottomNavigationBarItem> items;
   final NavigationBarSpeedDial speedDial;
-  final int initialIndex;
+  final int? initialIndex;
+  final int? currentIndex;
+  final int? speedDialIndex;
   final ValueChanged<int>? onTap;
 
   @override
@@ -25,11 +29,13 @@ class PostoryNavigationBar extends StatefulWidget {
 class _PostoryNavigationBarState extends State<PostoryNavigationBar> {
   static const showSelectedLabels = false;
   static const showUnselectedLabels = false;
-  static const speedDialIndex = 2;
   static const speedDialMarginBottom = 16.0;
   static const type = BottomNavigationBarType.fixed;
 
-  late var currentIndex = widget.initialIndex;
+  late var _currentIndex = widget.initialIndex;
+
+  bool get handleState => _currentIndex != null;
+  int get currentIndex => _currentIndex ?? widget.currentIndex!;
 
   void initSpeedDialOverlay() {
     Overlay.of(context)?.insert(OverlayEntry(
@@ -50,7 +56,7 @@ class _PostoryNavigationBarState extends State<PostoryNavigationBar> {
   }
 
   void setCurrentIndex(int index) {
-    setState(() => currentIndex = index);
+    setState(() => _currentIndex = index);
   }
 
   @override
@@ -59,10 +65,12 @@ class _PostoryNavigationBarState extends State<PostoryNavigationBar> {
       child: BottomNavigationBar(
         items: widget.items,
         onTap: (value) {
-          setCurrentIndex(value);
+          if (handleState) {
+            setCurrentIndex(value);
+          }
           widget.onTap?.call(value);
 
-          if (currentIndex == speedDialIndex) {
+          if (_currentIndex == widget.speedDialIndex) {
             widget.speedDial.controller.show();
           } else {
             widget.speedDial.controller.hide();
