@@ -20,6 +20,7 @@ NavigationBarSpeedDial newSpeedDial() {
 
 void main() {
   group('PostoryNavigationBar', () {
+    const speedDialIndex = 2;
     const items = [
       BottomNavigationBarItem(icon: Placeholder(), label: 'item 1'),
       BottomNavigationBarItem(icon: Placeholder(), label: 'item 2'),
@@ -45,54 +46,64 @@ void main() {
     });
 
     testWidgets('Tap callback with initialIndex', (tester) async {
-      final speedDial = newSpeedDial();
       int callback = 3;
+      final speedDial = newSpeedDial();
+      final navigationBar = PostoryNavigationBar(
+        initialIndex: callback,
+        items: items,
+        speedDial: speedDial,
+        onTap: (value) => callback = value,
+      );
 
-      await tester.pumpWidget(buildApp(
-        child: PostoryNavigationBar(
-          initialIndex: callback,
-          items: items,
-          speedDial: speedDial,
-          onTap: (value) => callback = value,
-        ),
-      ));
+      await tester.pumpWidget(buildApp(child: navigationBar));
       await tester.pumpAndSettle();
 
       for (var i = 0; i < items.length; i++) {
         await tester.tap(find.text(items[i].label!));
+        await tester.pumpAndSettle();
         expect(callback, i);
+
+        if (i == speedDialIndex) {
+          expect(find.byWidget(speedDial.icon), findsOneWidget);
+        } else {
+          expect(find.byWidget(speedDial.icon), findsNothing);
+        }
       }
     });
 
     testWidgets('Tap callback with currentIndex', (tester) async {
+      int callback = 3;
       final speedDial = newSpeedDial();
       final controller = StreamController<int>();
-      int callback = 3;
-
-      await tester.pumpWidget(
-        buildApp(
-          child: StreamBuilder<int>(
-            initialData: callback,
-            stream: controller.stream,
-            builder: (context, snapshot) {
-              return PostoryNavigationBar(
-                currentIndex: snapshot.data!,
-                items: items,
-                speedDial: speedDial,
-                onTap: (value) {
-                  controller.sink.add(value);
-                  callback = value;
-                },
-              );
+      final navigationBarBuilder = StreamBuilder<int>(
+        initialData: callback,
+        stream: controller.stream,
+        builder: (context, snapshot) {
+          return PostoryNavigationBar(
+            currentIndex: snapshot.data!,
+            items: items,
+            speedDial: speedDial,
+            onTap: (value) {
+              controller.sink.add(value);
+              callback = value;
             },
-          ),
-        ),
+          );
+        },
       );
+
+      await tester.pumpWidget(buildApp(child: navigationBarBuilder));
       await tester.pumpAndSettle();
 
       for (var i = 0; i < items.length; i++) {
         await tester.tap(find.text(items[i].label!));
+        await tester.pumpAndSettle();
         expect(callback, i);
+
+        if (i == speedDialIndex) {
+          expect(find.byWidget(speedDial.icon), findsOneWidget);
+        } else {
+          expect(find.byWidget(speedDial.icon), findsNothing);
+        }
       }
     });
   });

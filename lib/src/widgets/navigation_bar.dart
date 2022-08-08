@@ -70,7 +70,7 @@ class _PostoryNavigationBarState extends State<PostoryNavigationBar> {
           }
           widget.onTap?.call(value);
 
-          if (_currentIndex == widget.speedDialIndex) {
+          if (value == widget.speedDialIndex) {
             widget.speedDial.controller.show();
           } else {
             widget.speedDial.controller.hide();
