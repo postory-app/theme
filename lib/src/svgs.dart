@@ -24,6 +24,9 @@ class PostorySvgs {
   static final postory = _svg('POSTORY.svg');
   static final send_digital = _svg('send_digital.svg');
   static final send_real = _svg('send_real.svg');
+  static final slice_appstore = _svg('slice_appstore.svg');
+  static final slice_googleplay = _svg('slice_googleplay.svg');
+  static final slice_logo = _svg('slice_logo.svg');
   static final success = _svg('success.svg');
 
   static String _svg(String name) => '${assetPrefix}svgs/$name';

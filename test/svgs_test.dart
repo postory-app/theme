@@ -143,6 +143,27 @@ void main() {
       });
     });
 
+    group('slice_appstore', () {
+      test('should get a SVG file', () {
+        final actual = File(getPath(PostorySvgs.slice_appstore));
+        expect(actual.existsSync(), true);
+      });
+    });
+
+    group('slice_googleplay', () {
+      test('should get a SVG file', () {
+        final actual = File(getPath(PostorySvgs.slice_googleplay));
+        expect(actual.existsSync(), true);
+      });
+    });
+
+    group('slice_logo', () {
+      test('should get a SVG file', () {
+        final actual = File(getPath(PostorySvgs.slice_logo));
+        expect(actual.existsSync(), true);
+      });
+    });
+
     group('success', () {
       test('should get a SVG file', () {
         final actual = File(getPath(PostorySvgs.success));
