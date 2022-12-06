@@ -24,6 +24,7 @@ flutter:
     - images/explore/
     - images/payment/
     - images/pocoin/
+    - images/virtual_address/
     - lotties/
     - svgs/
 

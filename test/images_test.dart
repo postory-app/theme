@@ -202,5 +202,87 @@ void main() {
         expect(is3xExists(acutal), true);
       });
     });
+
+
+    group('virtual_address_book_city', () {
+      test('should get the file', () {
+        final acutal = File(Images.virtual_address_book_city.assetName);
+        expect(acutal.existsSync(), true);
+        expect(is2xExists(acutal), true);
+        expect(is3xExists(acutal), true);
+      });
+    });
+
+    group('virtual_address_code_city', () {
+      test('should get the file', () {
+        final acutal = File(Images.virtual_address_code_city.assetName);
+        expect(acutal.existsSync(), true);
+        expect(is2xExists(acutal), true);
+        expect(is3xExists(acutal), true);
+      });
+    });
+
+    group('virtual_address_dog_city', () {
+      test('should get the file', () {
+        final acutal = File(Images.virtual_address_dog_city.assetName);
+        expect(acutal.existsSync(), true);
+        expect(is2xExists(acutal), true);
+        expect(is3xExists(acutal), true);
+      });
+    });
+
+    group('virtual_address_dream_city', () {
+      test('should get the file', () {
+        final acutal = File(Images.virtual_address_dream_city.assetName);
+        expect(acutal.existsSync(), true);
+        expect(is2xExists(acutal), true);
+        expect(is3xExists(acutal), true);
+      });
+    });
+
+    group('virtual_address_gold_city', () {
+      test('should get the file', () {
+        final acutal = File(Images.virtual_address_gold_city.assetName);
+        expect(acutal.existsSync(), true);
+        expect(is2xExists(acutal), true);
+        expect(is3xExists(acutal), true);
+      });
+    });
+
+    group('virtual_address_mars_city', () {
+      test('should get the file', () {
+        final acutal = File(Images.virtual_address_mars_city.assetName);
+        expect(acutal.existsSync(), true);
+        expect(is2xExists(acutal), true);
+        expect(is3xExists(acutal), true);
+      });
+    });
+
+    group('virtual_address_silicon_valley_city', () {
+      test('should get the file', () {
+        final acutal = File(Images.virtual_address_silicon_valley_city.assetName);
+        expect(acutal.existsSync(), true);
+        expect(is2xExists(acutal), true);
+        expect(is3xExists(acutal), true);
+      });
+    });
+
+    group('virtual_address_temp_road', () {
+      test('should get the file', () {
+        final acutal = File(Images.virtual_address_temp_road.assetName);
+        expect(acutal.existsSync(), true);
+        expect(is2xExists(acutal), true);
+        expect(is3xExists(acutal), true);
+      });
+    });
+
+    group('virtual_address_bg', () {
+      test('should get the file', () {
+        final acutal = File(Images.virtual_address_bg.assetName);
+        expect(acutal.existsSync(), true);
+        expect(is2xExists(acutal), true);
+        expect(is3xExists(acutal), true);
+      });
+    });
   });
 }
