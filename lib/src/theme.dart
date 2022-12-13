@@ -4,7 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:postory_theme/src/old_theme.dart';
 
-import 'color_scheme.dart';
+import 'color_schemes.g.dart';
+import 'custom_color.g.dart';
 import 'themes/navigation_bar_theme_data.dart';
 
 export 'themes/navigation_bar_theme_data.dart';
@@ -15,11 +16,11 @@ class PostoryTheme {
     final oldThemes = OldThemes.light();
 
     return ThemeData.from(
-      colorScheme: colorScheme,
+      colorScheme: lightColorScheme,
       useMaterial3: true,
     ).copyWith(
       cupertinoOverrideTheme: CupertinoThemeData(
-        brightness: colorScheme.brightness,
+        brightness: lightColorScheme.brightness,
       ),
       // typography: Typography(
       //   white: TextThemes.white,
@@ -30,7 +31,7 @@ class PostoryTheme {
         selectedItemColor: navigationBarThemeData.selectedItemColor,
         unselectedItemColor: navigationBarThemeData.unselectedItemColor,
       ),
-      extensions: const [navigationBarThemeData],
+      extensions: [navigationBarThemeData, lightCustomColors],
 
       // TODO: deprecate old themes
       primaryColor: oldThemes.primaryColor,
@@ -52,5 +53,14 @@ class PostoryTheme {
     );
   }
 
-  static ThemeData dark() => PostoryTheme.light();
+  static ThemeData dark() {
+    const navigationBarThemeData = PostoryNavigationBarThemeData();
+    return ThemeData.from(colorScheme: darkColorScheme, useMaterial3: true).copyWith(
+      extensions: [navigationBarThemeData, lightCustomColors],
+    );
+  }
+}
+
+extension PostoryThemeOfBuildContext on BuildContext {
+  ThemeData get theme => Theme.of(this);
 }

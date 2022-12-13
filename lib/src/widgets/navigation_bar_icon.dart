@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
 
-import '../colors.dart';
 import '../icons.dart';
 
 class NavigationBarIcon extends StatelessWidget {
@@ -55,7 +54,8 @@ class NavigationBarIcon extends StatelessWidget {
               key: ValueKey(active),
               painter: _DotPainter(
                 radius: active ? maxDotRadius : minDotRadius,
-                color: Colors.yellow,
+                // TODO: remove custom color
+                color: const Color(0xFFFFD24A),
               ),
             ),
           ),
