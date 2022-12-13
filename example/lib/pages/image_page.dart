@@ -19,19 +19,22 @@ final images = {
   'payment_visa': MyImages.payment_visa,
   'pocoin_mail_multi': MyImages.pocoin_mail_multi,
   'pocoin_mail_single': MyImages.pocoin_mail_single,
+  'pocoin_postcard': MyImages.pocoin_postcard,
+  'pocoin_stamp': MyImages.pocoin_stamp,
   'pocoin_top_up_1': MyImages.pocoin_top_up_1,
   'pocoin_top_up_2': MyImages.pocoin_top_up_2,
   'pocoin_top_up_3': MyImages.pocoin_top_up_3,
   'pocoin_top_up_banner': MyImages.pocoin_top_up_banner,
+  'virtual_address_bg': MyImages.virtual_address_bg,
   'virtual_address_book_city': MyImages.virtual_address_book_city,
   'virtual_address_code_city': MyImages.virtual_address_code_city,
   'virtual_address_dog_city': MyImages.virtual_address_dog_city,
   'virtual_address_dream_city': MyImages.virtual_address_dream_city,
   'virtual_address_gold_city': MyImages.virtual_address_gold_city,
   'virtual_address_mars_city': MyImages.virtual_address_mars_city,
+  'virtual_address_search': MyImages.virtual_address_search,
   'virtual_address_silicon_valley_city': MyImages.virtual_address_silicon_valley_city,
   'virtual_address_temp_road': MyImages.virtual_address_temp_road,
-  'virtual_address_bg': MyImages.virtual_address_bg,
 }.entries.toList(growable: false);
 
 class ImagePage extends StatelessWidget {

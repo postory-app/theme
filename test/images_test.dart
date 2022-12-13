@@ -167,6 +167,24 @@ void main() {
       });
     });
 
+    group('pocoin_postcard', () {
+      test('should get the file', () {
+        final acutal = File(Images.pocoin_postcard.assetName);
+        expect(acutal.existsSync(), true);
+        expect(is2xExists(acutal), true);
+        expect(is3xExists(acutal), true);
+      });
+    });
+
+    group('pocoin_stamp', () {
+      test('should get the file', () {
+        final acutal = File(Images.pocoin_stamp.assetName);
+        expect(acutal.existsSync(), true);
+        expect(is2xExists(acutal), true);
+        expect(is3xExists(acutal), true);
+      });
+    });
+
     group('pocoin_top_up_1', () {
       test('should get the file', () {
         final acutal = File(Images.pocoin_top_up_1.assetName);
@@ -203,6 +221,14 @@ void main() {
       });
     });
 
+    group('virtual_address_bg', () {
+      test('should get the file', () {
+        final acutal = File(Images.virtual_address_bg.assetName);
+        expect(acutal.existsSync(), true);
+        expect(is2xExists(acutal), true);
+        expect(is3xExists(acutal), true);
+      });
+    });
 
     group('virtual_address_book_city', () {
       test('should get the file', () {
@@ -258,6 +284,15 @@ void main() {
       });
     });
 
+    group('virtual_address_search', () {
+      test('should get the file', () {
+        final acutal = File(Images.virtual_address_search.assetName);
+        expect(acutal.existsSync(), true);
+        expect(is2xExists(acutal), true);
+        expect(is3xExists(acutal), true);
+      });
+    });
+
     group('virtual_address_silicon_valley_city', () {
       test('should get the file', () {
         final acutal = File(Images.virtual_address_silicon_valley_city.assetName);
@@ -270,15 +305,6 @@ void main() {
     group('virtual_address_temp_road', () {
       test('should get the file', () {
         final acutal = File(Images.virtual_address_temp_road.assetName);
-        expect(acutal.existsSync(), true);
-        expect(is2xExists(acutal), true);
-        expect(is3xExists(acutal), true);
-      });
-    });
-
-    group('virtual_address_bg', () {
-      test('should get the file', () {
-        final acutal = File(Images.virtual_address_bg.assetName);
         expect(acutal.existsSync(), true);
         expect(is2xExists(acutal), true);
         expect(is3xExists(acutal), true);
