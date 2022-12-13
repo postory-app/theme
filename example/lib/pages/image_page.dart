@@ -23,6 +23,15 @@ final images = {
   'pocoin_top_up_2': MyImages.pocoin_top_up_2,
   'pocoin_top_up_3': MyImages.pocoin_top_up_3,
   'pocoin_top_up_banner': MyImages.pocoin_top_up_banner,
+  'virtual_address_book_city': MyImages.virtual_address_book_city,
+  'virtual_address_code_city': MyImages.virtual_address_code_city,
+  'virtual_address_dog_city': MyImages.virtual_address_dog_city,
+  'virtual_address_dream_city': MyImages.virtual_address_dream_city,
+  'virtual_address_gold_city': MyImages.virtual_address_gold_city,
+  'virtual_address_mars_city': MyImages.virtual_address_mars_city,
+  'virtual_address_silicon_valley_city': MyImages.virtual_address_silicon_valley_city,
+  'virtual_address_temp_road': MyImages.virtual_address_temp_road,
+  'virtual_address_bg': MyImages.virtual_address_bg,
 }.entries.toList(growable: false);
 
 class ImagePage extends StatelessWidget {

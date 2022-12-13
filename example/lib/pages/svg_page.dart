@@ -24,6 +24,9 @@ final svgs = {
   'send_digital': MySvgs.send_digital,
   'send_real': MySvgs.send_real,
   'success': MySvgs.success,
+  'slice_appstore': MySvgs.slice_appstore,
+  'slice_googleplay': MySvgs.slice_googleplay,
+  'slice_logo': MySvgs.slice_logo,
 }.entries.toList(growable: false);
 
 class SvgPage extends StatelessWidget {

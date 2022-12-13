@@ -36,7 +36,7 @@ class PostoryNavigationBarThemeData
   @override
   ThemeExtension<PostoryNavigationBarThemeData> lerp(
       ThemeExtension<PostoryNavigationBarThemeData>? other, double t) {
-    throw UnimplementedError();
+    return this;
   }
 }
 
